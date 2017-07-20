@@ -1,0 +1,13 @@
+<xa-datasource jndi-name="java:jboss/datasources/acme" pool-name="AcmeXA" enabled="true" statistics-enabled="true">
+                    <xa-datasource-property name="URL">jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</xa-datasource-property>
+                    <driver>h2</driver>
+                    <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+		     <xa-pool>
+                        <min-pool-size>0</min-pool-size>
+                        <is-same-rm-override>true</is-same-rm-override>
+                    </xa-pool>
+                    <security>
+                        <user-name>sa</user-name>
+                        <password>sa</password>
+                    </security>
+</xa-datasource>
